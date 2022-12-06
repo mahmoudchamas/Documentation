@@ -1,0 +1,161 @@
+hgroup h2,
+#about h3 {
+  display: none;
+}
+#about p {
+  width: 60%;
+  opacity: 0.5;
+  border-radius: border-box;
+  padding-left: 10px;
+}
+body > div {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+hgroup h1 {
+  border-bottom: 1px rgb(182, 171, 171) solid;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+div img {
+  position: absolute;
+  top: 40px;
+  right: 150px;
+  width: 15%;
+  transform: rotate(-10deg);
+}
+
+#competencies {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#competencies h3 {
+  position: relative;
+  bottom: 20px;
+  grid-row: 1/3;
+}
+.skills {
+  border-left: 1px solid black;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.skills-primary {
+  display: flex;
+  width: 100%;
+  border: 1px red slid;
+}
+.skills-secondary {
+  display: flex;
+}
+
+.skills-primary div {
+  background-color: cornflowerblue;
+  font-size: larger;
+  width: 20%;
+  margin: 4px;
+  padding: 8px 0px 8px 5px;
+}
+.skills-secondary div {
+  background-color: cornflowerblue;
+  font-size: smaller;
+  width: 20.5%;
+  margin: 4px;
+  padding: 8px 0px 8px 5px;
+}
+
+.experience-institution,
+#contact h3 {
+  display: none;
+}
+
+#education {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#experiences {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.contact-type {
+  display: none;
+}
+#experiences h3 {
+  grid-row: 1/3;
+  border-right: 1px black solid;
+}
+
+#education h3 {
+  grid-row: 1/3;
+  border-right: 1px black solid;
+}
+
+.experience-description,
+.experience-type {
+  padding-left: 10px;
+}
+.experience-type {
+  color: cadetblue;
+}
+.conact-value {
+  display: none;
+}
+
+#about {
+  padding-bottom: 100px;
+}
+
+.contact-skype {
+  display: none;
+}
+
+#hobbies h3 {
+  border-right: 1px black solid;
+}
+
+#hobbies {
+  display: grid;
+  grid-template-rows: 90px;
+  grid-template-columns: 150px 1fr;
+}
+.experience-details {
+  display: flex;
+  margin-left: 1300px;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+  body > div {
+    margin: 0px;
+  }
+
+  #competencies,
+  #experiences,
+  #education {
+    display: block;
+  }
+}
+.contact-facebook {
+  background: url(../images/facebook.png);
+  width: 50px;
+  height: 50px;
+}
+.contacts{
+  display: flex;
+justify-content: space-between;
+  outline: none;
+}
+.contact-facebook {
+  background: url(../images/facebook.png);
+  width: 50px;
+  height: 50px;
+}
+.contact-gethub {
+  background: url(../images/github.png);
+  width: 50px;
+  height: 50px;
+}

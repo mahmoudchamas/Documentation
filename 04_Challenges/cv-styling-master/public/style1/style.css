@@ -1,0 +1,120 @@
+header {
+  background-color: grey;
+  padding-left: 150px;
+}
+header div {
+  display: flex;
+}
+hgroup {
+  color: red;
+}
+#contact h3 {
+  display: none;
+}
+#contact {
+  position: absolute;
+  padding-right: 850px;
+  top: 70px;
+  right: 5px;
+}
+.contact {
+  display: flex;
+}
+.contact-type {
+  background-color: red;
+}
+
+dl {
+  margin: 0px;
+}
+dd {
+  background-color: black;
+  margin: 0px;
+  width: 200px;
+}
+
+dt {
+  width: 150px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+h3:before {
+  content: ".";
+  font-size: 120px;
+  line-height: 30px;
+  color: red;
+}
+h3 {
+  border-bottom: 0.5px solid grey;
+}
+.skill {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  margin-top: 15px;
+}
+
+div.skills-primary::before {
+  content: "Main";
+  color: #000;
+}
+div.skills-secondary::before {
+  display: flex;
+  margin-top: 15px;
+  content: "other";
+  color: #000;
+}
+.skills-primary [data-skill="5"] span {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+.skills-primary [data-skill="3"] span {
+  background-color: red;
+  width: 25%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+.skills-primary [data-skill="1"] span {
+  background-color: red;
+  width: 10%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+.skills-secondary [data-skill="9"] span {
+  background-color: red;
+  width: 85%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+.skills-secondary [data-skill="5"] span {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+
+.skills-secondary [data-skill="7"] span {
+  padding: 1px;
+  background-color: red;
+  width: 70%;
+  height: 100%;
+  display: block;
+  color: aliceblue;
+}
+body {
+  padding: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    display: block;
+  }
+}
