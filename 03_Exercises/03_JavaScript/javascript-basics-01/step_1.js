@@ -1,3 +1,3 @@
 
-var a="name" ;
+var a="Mahmoud" ;
 alert(a);
