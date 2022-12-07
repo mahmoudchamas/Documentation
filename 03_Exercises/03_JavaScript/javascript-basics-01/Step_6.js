@@ -1,7 +1,8 @@
-var num1 = prompt("enter the first number") ;
-var num2 = prompt("enter the seconde number") ;
-
-
-
-var num3=num1%num2;
-window.alert( "the remainder of the division: "+parseInt(num3));
+function rem(){
+    var num1 , num2 , reminder;
+    num1 = parseInt(document.getElementById("first_number").value);
+    num2 = parseInt(document.getElementById("second_number").value);
+    reminder= num1%num2;
+    
+    alert("the reminder of division ="+reminder)
+    }

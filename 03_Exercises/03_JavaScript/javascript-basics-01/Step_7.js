@@ -1,16 +1,8 @@
-var shoeSize = prompt("enter your shoe size") ;
-var birthYear = prompt("enter the seconde number") ;
-
-
-function multi(shoeSize , birthYear){
-    var x = shoeSize * 2 ;
-    var y = x + 5 ;
-    var a = y * 50;
-    var num = a - birthYear ;
-    var num2 = num + 1776 ;
+function rem(){
+    var num1 , num2 , reminder;
+    num1 = parseInt(document.getElementById("first_number").value);
+    num2 = parseInt(document.getElementById("second_number").value);
+    reminder= num1%num2;
     
-   return alert(num2);
-}
-
-
- multi(shoeSize,birthYear);
+    alert("the reminder of division ="+reminder)
+    }
