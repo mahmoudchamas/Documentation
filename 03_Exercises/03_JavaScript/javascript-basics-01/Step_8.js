@@ -1,8 +1,13 @@
-let age = prompt("enter your age");
+alert("enter your name")
+function age1(){
+    var age ;
+    num1 = parseInt(document.getElementById("age").value);
+    
+    if(age => 18){
+        alert("your age is under 18");
 
-if(age <= 18){
-    alert("your age is ander 18");
-}else{
+    
+    }else {
     alert("your age is over 18");
- 
+    }
 }
