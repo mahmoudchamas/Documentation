@@ -1,7 +1,8 @@
- var num1 = prompt("enter the first number") ;
-var num2 = prompt("enter the seconde number") ;
+function add(){
+var num1 , num2 , sum ;
+num1 = parseInt(document.getElementById("first_number").value);
+num2 = parseInt(document.getElementById("second_number").value);
+sum = num1 + num2;
 
-
-
-var num3=num1*num2;
-window.alert( "num1 x num2=  "+parseInt(num3));
+alert(sum)
+}
