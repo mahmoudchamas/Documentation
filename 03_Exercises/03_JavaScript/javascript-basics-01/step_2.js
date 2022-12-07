@@ -1,3 +1,5 @@
-alert('Name:Doe \n Surname:jhon \n city:New-york');
-
+var name1="Mahmoud";
+var surname="Chamas";
+var city="Beirut";
+alert("name :"+name1+"\n"+"surname:"+surname+"\n"+"city:"+city    )
 
