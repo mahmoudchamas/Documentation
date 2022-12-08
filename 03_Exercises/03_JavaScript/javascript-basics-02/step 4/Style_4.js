@@ -1,10 +1,11 @@
-
-
-function test() {
-    var x = confirm("Are you sure you want to reset all text?");
-    if (x == true) {
-      document.getElementById("name").value = "";
-      document.getElementById("surname").value = "";
-      document.getElementById("city").value = "";
-    }
+function test1() {
+  var val = confirm("you are going to reset the form");
+  if (val == true) {
+    document.getElementById("name").value = null;
+    document.getElementById("surname").value = "";
+    document.getElementById("city").value = "";
+  } else {
+    alert("no ");
+    return 0;
+  }
 }
