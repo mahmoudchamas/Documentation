@@ -39,3 +39,4 @@ WHERE companies.name = emloyees.company AND companies.date <2000
  16/ SELECT company
     FROM emloyees
     WHERE Role = 'Graphic Designer '
+    17/
