@@ -28,15 +28,40 @@ SELECT * from students ;
 	
        13 /DELETE  FROM students WHERE (name = 'layla');
 
-14/SELECT emloyees.name , companies.name as company , companies.date ,
+14/SELECT emloyees.name,companies.name as company , companies.date ,
 FROM companies,emloyees ,
 Where companies.name=emloyees.company ,
 
-15/ SELECT emloyees.name ,
-FROM companies.emloyees ,
+15/ SELECT emloyees.name 
+FROM companies.emloyees 
 WHERE companies.name = emloyees.company AND companies.date <2000
 
  16/ SELECT company
     FROM emloyees
     WHERE Role = 'Graphic Designer '
-    17/
+
+    18/ SELECT Name FROM students 
+    WHERE max(Points)
+
+    19/ SELECT AVG(Points) FROM students
+
+    20 / SELECT name from students WHERE (Points>500)
+
+    21/ SELECT COLUMUN names LIKE %s% FROM students 
+
+    22/  
+
+
+    20/
+
+
+    21/
+
+
+
+    22/
+
+
+
+
+
