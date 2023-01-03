@@ -49,7 +49,7 @@ function onDataReceived(text) {
 }
 // this function is a list of what to do that application to help user 
 function help(){
-  console.log("if you write quit or exit you turn out the app");
+  console.log(" if you write quit or exit you turn out the app");
   console.log("if you write   help  hellp messege appear on the screen");
   console.log("if you write help a list of help commande it will appear on the screen");
   console.log("if you write list a what to do list will appear on the screen");
