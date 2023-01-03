@@ -37,8 +37,9 @@ function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
-   else if(text === 'hello\n'){
-    hello();
+   else if(text.substring(0, 5) === 'hello\n'){
+
+    hello(text.replace("\n", "").substring(6));
    }
   
 
