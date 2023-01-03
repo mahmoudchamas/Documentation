@@ -37,9 +37,12 @@ function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
+   else if(text === 'hello\n'){
     hello();
-  }
+   }
+  
+
+  
   else if (text === 'help\n'){
     help();
   }
@@ -50,7 +53,7 @@ function onDataReceived(text) {
 // this function is a list of what to do that application to help user 
 function help(){
   console.log(" if you write quit or exit you turn out the app");
-  console.log("if you write   help  hellp messege appear on the screen");
+  console.log("if you write   hello , (hello!) messege appear on the screen and if you write hello with sentence the sentence will end with !");
   console.log("if you write a (unknowcommand) a (unknowcommand) with your massege appear on the screen  ");
   console.log("if you write help a list of help commande it will appear on the screen");
   console.log("if you write list a what to do list will appear on the screen");
@@ -74,8 +77,10 @@ function unknownCommand(c){
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+function hello(text1){
+  if(text1 === "hello")
+  console.log("hello " + text1 + "!");
+  
 }
 
 
