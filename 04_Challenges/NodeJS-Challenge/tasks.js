@@ -44,7 +44,12 @@ function onDataReceived(text) {
  else if (text === 'list\n'){
     list()
   }
-
+  else if (text === " "){
+     console.log("add a new task please");
+  }
+   else if (text.substring(0,3) === "add"){
+    add(text.replace("\n","").substring(4));
+   }
   
   else if (text === 'help\n'){
     help();
@@ -74,6 +79,9 @@ function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
 
+function add(x){
+list1.push(x);
+}
 
 /**
  * Says hello
@@ -96,7 +104,9 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-var list1 = ["task1","task2","task3","task4",]
+var list1 = ["task1","task2","task3","task4",];
+
+
  
 function list(){
   for (var i =0 ; i <list1.length ; i++ ){
@@ -104,6 +114,13 @@ function list(){
   }
 
 }
+
+
+
+
+
+
+
 
 
 // The following line starts the application
