@@ -54,6 +54,17 @@ function onDataReceived(text) {
   else if (text === 'help\n'){
     help();
   }
+
+else if(text === "remove\n"){
+  remove(list1.length-1);
+}
+else if (text.trim().substring(7) > list1.length -1){
+  console.log("task not exist");
+}
+else if(text.substring(0,6)==="remove"){
+  remove(text.trim().substring(7));
+}
+
   else{
     unknownCommand(text);
   }
@@ -114,8 +125,12 @@ function list(){
   }
 
 }
+function remove(x){
 
+list1.splice(x,1);
 
+}
+    
 
 
 
