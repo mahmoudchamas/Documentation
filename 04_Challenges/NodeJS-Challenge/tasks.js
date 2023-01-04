@@ -63,6 +63,11 @@ else if (text.trim().substring(7) > list1.length -1){
 }
 else if(text.substring(0,6)==="remove"){
   remove(text.trim().substring(7));
+
+}
+
+else if(text === ""){
+console.log(" error better remove");
 }
 
   else{
