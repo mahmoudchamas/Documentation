@@ -41,7 +41,9 @@ function onDataReceived(text) {
 
     hello(text.replace("\n", "").substring(6));
    }
-  
+ else if (text === 'list\n'){
+    list()
+  }
 
   
   else if (text === 'help\n'){
@@ -78,9 +80,9 @@ function unknownCommand(c){
  *
  * @returns {void}
  */
-function hello(text1){
-  if(text1 === "hello")
-  console.log("hello " + text1 + "!");
+function hello(text){
+  if(text === "hello")
+  console.log("hello " + text + "!");
   
 }
 
@@ -94,6 +96,15 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+var list1 = ["task1","task2","task3","task4",]
+ 
+function list(){
+  for (var i =0 ; i <list1.length ; i++ ){
+  console.log(i+1 +" "+ list1[i]);
+  }
+
+}
+
 
 // The following line starts the application
 startApp("Mhahmoud Chamas")
