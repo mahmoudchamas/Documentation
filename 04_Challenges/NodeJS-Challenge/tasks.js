@@ -76,6 +76,7 @@ function help(){
   console.log("if you write a (unknowcommand) a (unknowcommand) with your massege appear on the screen  ");
   console.log("if you write help a list of help commande it will appear on the screen");
   console.log("if you write list a what to do list will appear on the screen");
+  console.log("if you write remove(number of task you want to remove) you remove the task");
 }
 
 
