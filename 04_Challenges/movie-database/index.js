@@ -50,3 +50,32 @@ app.get('/search',(req,res) => {
       res.send(response);
   }
 })
+
+app.get("/movies/create", (req, res) => {
+  res.send({ status: 200, message: "create" });
+});
+// app.get("/movies/read", (req, res) => {
+//   res.send({ status: 200, message: "read" });
+// });
+app.get("/movies/delete", (req, res) => {
+  res.send({ status: 200, message: "update" });
+});
+app.get("/test", (req, res) => {
+  res.send({ status: 200, message: "delete" });
+});
+
+
+const movies = [
+  { title: 'Jaws', year: 1975, rating: 8 },
+  { title: 'Avatar', year: 2009, rating: 7.8 },
+  { title: 'Brazil', year: 1985, rating: 8 },
+  { title: 'الإرهاب والكباب', year: 1992, rating: 6.2 }
+];
+
+app.get('/movies',(req,res) => res.send(movies));
+
+app.get("/movies/read", (req, res) => {
+  let text = req.params.text;
+  console.log(text)
+  res.send({ status: 200, data : movies [text]});
+});
