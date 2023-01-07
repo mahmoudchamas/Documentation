@@ -113,3 +113,20 @@ app.get('/movies/read/by-date', (req, res) => {
     })
     res.send({status:200, data:sort1});
   });
+
+
+app.get('/movies/read/id/:text?', (req, res) => {
+  let text = req.params.text;
+  console.log(text)
+  if(text<=movies.length){
+    res.send({status:200, data:movies[text-1].title})
+
+  }else{
+    res.send({status:404, error:true, message:'this movie <ID> does not exist'})
+  }
+})
+
+
+app.listen(3000, () =>
+  console.log('server listing on port : 3000'),
+);
