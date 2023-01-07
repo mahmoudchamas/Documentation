@@ -75,7 +75,41 @@ const movies = [
 app.get('/movies',(req,res) => res.send(movies));
 
 app.get("/movies/read", (req, res) => {
+  
   let text = req.params.text;
-  console.log(text)
-  res.send({ status: 200, data : movies [text]});
+  console.log(movies)
+  res.send({ status: 200});
+
+  
 });
+
+
+
+
+app.get('/movies/read/by-date', (req, res) => {
+  
+  var sort1= [];
+  for (var title1 in movies) {
+    console.log(movies[title1].title)
+      sort1.push([movies[title1].title, movies[title1].year]);
+  }
+  sort1.sort(function(a,b){
+    return new sort1(b.title) - new sort1(a.title);
+  })
+  res.send({status:200, data:sort1});
+});
+
+  app.get('/movies/read/by-reating', (req, res) => {
+  
+    
+    var sort1= [];
+    for (var rat1 in movies) {
+      console.log(movies[rat1].title)
+      sort1.sort()
+        sort1.push([movies[rat1].title, movies[rat1].rating]);
+    }
+    sort1.sort(function(a,b){
+      return new Date(b.year) - new Date(a.year);
+    })
+    res.send({status:200, data:sort1});
+  });
