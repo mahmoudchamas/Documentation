@@ -72,6 +72,11 @@ else if(text === "edit"){
 else if(text === ""){
 console.log(" error better remove");
 }
+else if (text.trim().split(" ")[0] == "check"){
+  check(text.trim().split(" ")[1]);
+}else if (text.trim().split(" ")[0] == "uncheck"){
+  uncheck(text.trim().split(" ")[1]);
+}
 
   else{
     unknownCommand(text);
@@ -143,9 +148,36 @@ list1.splice(x,1);
     list1[text1] = text ;
    } 
 
+   function check(y){
+    for(var i =0;i<List.length;i++){
+    if(y == i+1){
+        list1[i].done = Boolean(true);
+        
+    }
+  }
+  }
+  function uncheck(y){
+    for(var i =0;i<List.length;i++){
+        if(y == i+1){
+            list1[i].done = Boolean(false);
+            
+        }
+  }
+  }
 
+   function list(){
+   
+    for(var i=0;i<list1.length;i++){
+       if(list1[i].done == true){
+         console.log(i+1+" - [✓] "+list1[i].x+"\n")
+       }else{
+         console.log(i+1+" - [ ] "+list1[i].x+"\n")
+       }
+    }
+    taskNumber=List.length;
+    console.log("Number of tasks:", taskNumber)
 
-
+  }
 
 
 
