@@ -149,7 +149,7 @@ list1.splice(x,1);
    } 
 
    function check(y){
-    for(var i =0;i<List.length;i++){
+    for(var i =0;i<list1.length;i++){
     if(y == i+1){
         list1[i].done = Boolean(true);
         
@@ -157,7 +157,7 @@ list1.splice(x,1);
   }
   }
   function uncheck(y){
-    for(var i =0;i<List.length;i++){
+    for(var i =0;i<list1.length;i++){
         if(y == i+1){
             list1[i].done = Boolean(false);
             
