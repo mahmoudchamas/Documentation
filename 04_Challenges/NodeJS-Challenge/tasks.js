@@ -1,4 +1,3 @@
-
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -183,3 +182,33 @@ list1.splice(x,1);
 
 // The following line starts the application
 startApp("Mhahmoud Chamas")
+
+const {readFile,writeFile} = require('fs') ;
+
+readFile('/database.jason','utf-8' , (err,result) => {
+     var result2 ;
+    var myResult , myResult2 ;
+    if(err){
+        console.log(err);
+    }else{
+        myResult = result; 
+        console.log(result);
+        readFile('/save.jason',(err2, result2) => {
+            if (err){
+                console.log(err2);
+                return;
+            }
+        });
+    }
+myResult = result2;
+console.log(myResult2);
+writeFile("./content/result-asyn.txt",`1 : ${myResult} , 2: ${myResult2} `,{flag :'a' }, (wErr , wResult) => {
+    if(wErr){
+        console.log(wErr);
+        return;
+    }
+    console.log(wResult);
+    console.log('Done :)')
+} )
+
+});
