@@ -149,3 +149,18 @@ app.get('/movies/add', (req, res) => {
   });
 });
 
+app.get('/movies/delete', (req, res) => {
+let filteredArray = sort1.filter(sort1=> {
+  if(sort1.title == title ){
+    filteredArray.pop();
+  }
+  else{
+    res.send({ status: 200, message : " the movie does not exist"});
+    
+  }
+
+
+
+})
+
+});
