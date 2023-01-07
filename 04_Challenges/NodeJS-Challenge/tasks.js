@@ -65,6 +65,9 @@ else if(text.substring(0,6)==="remove"){
   remove(text.trim().substring(7));
 
 }
+else if(text === "edit"){
+  edit(text.trim().substring(7));
+}
 
 else if(text === ""){
 console.log(" error better remove");
@@ -136,7 +139,9 @@ function remove(x){
 list1.splice(x,1);
 
 }
-    
+   function edit(text1,text){
+    list1[text1] = text ;
+   } 
 
 
 
