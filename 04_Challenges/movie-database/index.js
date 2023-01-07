@@ -130,3 +130,22 @@ app.get('/movies/read/id/:text?', (req, res) => {
 app.listen(3000, () =>
   console.log('server listing on port : 3000'),
 );
+
+
+app.get('/movies/add', (req, res) => {
+  
+  
+  for (var title1 in movies) {
+    let addNew = new moviesModel({
+      title: req.query.title,
+      year: req.query.year,
+      rating: req.query.rating,
+    });
+    
+  }
+  newMovie.save((err, newMovie) => {
+    if (err) res.send(err);
+    else res.send({ status: 200, data: addNew});
+  });
+});
+
